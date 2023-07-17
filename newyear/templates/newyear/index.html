@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is It New Year's ?</title>
+    <link rel="stylesheet" href="{% static 'newyear/style.css'%}">
+</head>
+<body>
+    <!-- In Django, curly and % is template tag is used for conditional logic in HTML templates. -->
+<h1 style="color:brown;">IS It New Year Today ?</h1>
+    {% if newyear %}
+    <!--  Make sure that the newyear variable is passed to the template context from your Django view.  -->
+    <h1 style="color:greenyellow;">Yes</h1>
+{% else %}
+    <h1 style="color:red;">NO</h1>
+{% endif %}
+
+<h3 style="color:brown;">Today is: {{ now}} </h3>
+</body>
+</html>
